@@ -13,7 +13,9 @@
     "start": "strapi start",
     "strapi": "strapi",
     "upgrade": "npx @strapi/upgrade latest",
-    "upgrade:dry": "npx @strapi/upgrade latest --dry"
+    "upgrade:dry": "npx @strapi/upgrade latest --dry",
+    "backup": "node ./scripts/create-schema-backup.js",
+    "backup-full": "node ./scripts/create-full-backup.js"
   },
   "dependencies": {
     "@_sh/strapi-plugin-ckeditor": "^6.0.1",
