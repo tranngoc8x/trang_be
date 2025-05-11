@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "khach_hangs",
+  "info": {
+    "singularName": "khach-hang",
+    "pluralName": "khach-hangs",
+    "displayName": "Khách hàng",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "website": {
+      "type": "string"
+    }
+  }
+}

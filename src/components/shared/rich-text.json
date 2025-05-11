@@ -7,7 +7,15 @@
   },
   "options": {},
   "attributes": {
-    "body": {
+    "title": {
+      "type": "string"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.quote"
+    },
+    "description": {
       "type": "richtext"
     }
   }

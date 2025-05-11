@@ -1,0 +1,40 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_page_contents",
+  "info": {
+    "singularName": "home-page-content",
+    "pluralName": "home-page-contents",
+    "displayName": "HomePage Content",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "partner": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.article"
+    },
+    "service": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.article"
+    },
+    "aboutus": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.article"
+    },
+    "news": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.article"
+    },
+    "company_achievement": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.rich-text"
+    }
+  }
+}

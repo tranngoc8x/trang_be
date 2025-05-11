@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bao_gia_and_tu_vans",
+  "info": {
+    "singularName": "bao-gia-and-tu-van",
+    "pluralName": "bao-gia-and-tu-vans",
+    "displayName": "Báo giá & tư vấn"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "customer_name": {
+      "type": "string",
+      "required": true
+    },
+    "customer_phone": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}
