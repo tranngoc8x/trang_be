@@ -4,7 +4,8 @@
   "info": {
     "singularName": "bao-gia-and-tu-van",
     "pluralName": "bao-gia-and-tu-vans",
-    "displayName": "Báo giá & tư vấn"
+    "displayName": "Báo giá & tư vấn",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,13 +15,15 @@
       "type": "string",
       "required": true
     },
-    "customer_phone": {
-      "type": "string",
-      "required": true
-    },
     "content": {
-      "type": "richtext",
-      "required": true
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "customer_phone": {
+      "type": "string"
     }
   }
 }

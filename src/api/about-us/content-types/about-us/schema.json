@@ -33,7 +33,7 @@
     "content": {
       "type": "customField",
       "options": {
-        "preset": "defaultMarkdown"
+        "preset": "defaultHtml"
       },
       "customField": "plugin::ckeditor5.CKEditor"
     },
@@ -49,6 +49,10 @@
           "localized": false
         }
       }
+    },
+    "order": {
+      "type": "integer",
+      "default": 1
     }
   }
 }
