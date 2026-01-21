@@ -718,6 +718,7 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
     >;
     products: Schema.Attribute.Relation<'oneToMany', 'api::product.product'>;
     publishedAt: Schema.Attribute.DateTime;
+    show_in_home: Schema.Attribute.Boolean;
     slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
     title: Schema.Attribute.String &
       Schema.Attribute.Required &

@@ -58,6 +58,9 @@
       "relation": "oneToMany",
       "target": "api::product.product",
       "mappedBy": "service"
+    },
+    "show_in_home": {
+      "type": "boolean"
     }
   }
 }
