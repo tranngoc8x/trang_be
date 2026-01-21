@@ -415,6 +415,12 @@ export interface ApiAboutUsAboutUs extends Struct.CollectionTypeSchema {
     >;
     order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<1>;
     publishedAt: Schema.Attribute.DateTime;
+    SEO: Schema.Attribute.Component<'shared.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
     title: Schema.Attribute.String &
       Schema.Attribute.Required &
@@ -459,6 +465,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    SEO: Schema.Attribute.Component<'shared.seo', false>;
     slug: Schema.Attribute.UID<'title'>;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
@@ -649,7 +656,14 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       'api::product.product'
     >;
     publishedAt: Schema.Attribute.DateTime;
+    SEO: Schema.Attribute.Component<'shared.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     service: Schema.Attribute.Relation<'manyToOne', 'api::service.service'>;
+    show_in_home: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
     title: Schema.Attribute.String &
       Schema.Attribute.Required &
@@ -761,6 +775,7 @@ export interface ApiSlideSlide extends Struct.CollectionTypeSchema {
 export interface ApiStaticPageStaticPage extends Struct.CollectionTypeSchema {
   collectionName: 'static_pages';
   info: {
+    description: '';
     displayName: 'Trang t\u0129nh';
     pluralName: 'static-pages';
     singularName: 'static-page';
@@ -786,6 +801,7 @@ export interface ApiStaticPageStaticPage extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    SEO: Schema.Attribute.Component<'shared.seo', false>;
     slug: Schema.Attribute.UID<'title'>;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;

@@ -5,7 +5,7 @@
   "description": "A Strapi application",
   "main": "server.js",
   "scripts": {
-    "build": "strapi build",
+    "build": "NODE_OPTIONS='--max-old-space-size=2048 --max-semi-space-size=128' strapi build",
     "console": "strapi console",
     "deploy": "strapi deploy",
     "dev": "strapi develop",
@@ -20,12 +20,17 @@
     "serve": "node server.js",
     "app": "node app.js",
     "production": "node start.js",
-    "sharehost": "node server.js"
+    "sharehost": "NODE_ENV=production node --max-old-space-size=512 server.js",
+    "clear-cache": "rm -rf .cache build node_modules/.cache",
+    "rebuild": "npm run clear-cache && npm run build",
+    "build-prod": "NODE_ENV=production NODE_OPTIONS='--max-old-space-size=2048 --max-semi-space-size=128' strapi build --minify",
+    "build-simple": "NODE_ENV=production strapi build",
+    "api-only": "NODE_ENV=production SERVE_ADMIN=false node --max-old-space-size=512 server.js"
   },
   "dependencies": {
     "@_sh/strapi-plugin-ckeditor": "^6.0.1",
     "@strapi/plugin-cloud": "5.13.0",
-    "@strapi/plugin-documentation": "^5.13.0",
+    "@strapi/plugin-documentation": "^5.16.0",
     "@strapi/plugin-seo": "^2.0.8",
     "@strapi/plugin-users-permissions": "5.13.0",
     "@strapi/strapi": "5.13.0",

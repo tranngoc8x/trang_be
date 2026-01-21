@@ -4,7 +4,8 @@
   "info": {
     "singularName": "static-page",
     "pluralName": "static-pages",
-    "displayName": "Trang tĩnh"
+    "displayName": "Trang tĩnh",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -23,6 +24,12 @@
         "preset": "defaultHtml"
       },
       "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "SEO": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo",
+      "required": false
     }
   }
 }
