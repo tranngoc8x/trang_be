@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: trang-backend-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: trang-backend-app:latest
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "1337:1337"
+    volumes:
+      - .:/opt/app
+      # Đảm bảo mount thư mục node_modules an toàn không bị over-write với máy thật host
+      - /opt/node_modules
