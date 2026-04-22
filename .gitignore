@@ -129,3 +129,7 @@ dist
 build
 .strapi-updater.json
 .strapi-cloud.json
+
+# Dolt database files (added by bd init)
+.dolt/
+*.db
