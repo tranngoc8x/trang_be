@@ -1,0 +1,23 @@
+[22-Jan-2026 14:26:08 UTC] PHP Warning:  file_get_contents(https://assets.kachivina.vn/robots.txt): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/nhkacdnp/admin.kachivina.vn/wp-jump.php on line 186
+[22-Jan-2026 14:27:15 UTC] PHP Warning:  file_get_contents(http://www.vncleaning.com/api/html/vn/dirs/games/dien-bien-as-tel-aviv-university-nu-vs-maccabi-kiryat-gat-nu.html?host=https://assets.kachivina.vn): Failed to open stream: Connection timed out in /home/nhkacdnp/admin.kachivina.vn/wp-jump.php on line 158
+[22-Jan-2026 16:24:45 UTC] PHP Warning:  file_get_contents(https://assets.kachivina.vn/robots.txt): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/nhkacdnp/admin.kachivina.vn/wp-jump.php on line 186
+[24-Jan-2026 06:48:46 UTC] PHP Warning:  file_get_contents(http://www.vncleaning.com/api/html/vn/dirs/apps/ty-so-as-harima-albion-nu-vs-nittaidai-university-nu/?host=https://assets.kachivina.vn): Failed to open stream: Connection timed out in /home/nhkacdnp/admin.kachivina.vn/wp-jump.php on line 158
+[24-Jan-2026 07:21:37 UTC] PHP Warning:  file_get_contents(http://www.vncleaning.com/api/html/vn/dirs/apps/sanphamcuoc/?host=https://admin.kachivina.vn): Failed to open stream: Connection timed out in /home/nhkacdnp/admin.kachivina.vn/wp-jump.php on line 158
+[24-Jan-2026 09:49:13 UTC] PHP Warning:  file_get_contents(http://www.vncleaning.com/api/html/vn/dirs/games/100-diem-lo-duoc-bao-nhieu-tien/?host=https://assets.kachivina.vn): Failed to open stream: Connection timed out in /home/nhkacdnp/admin.kachivina.vn/wp-jump.php on line 158
+[24-Jan-2026 10:18:26 UTC] PHP Warning:  file_get_contents(https://assets.kachivina.vn/robots.txt): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/nhkacdnp/admin.kachivina.vn/wp-jump.php on line 186
+[24-Jan-2026 12:21:30 UTC] PHP Warning:  file_get_contents(http://www.vncleaning.com/api/html/vn/dirs/apps/dien-bien-gil-vicente-vs-estrela-da-amadora.html?host=https://assets.kachivina.vn): Failed to open stream: Connection timed out in /home/nhkacdnp/admin.kachivina.vn/wp-jump.php on line 158
+[24-Jan-2026 14:33:22 UTC] PHP Warning:  file_get_contents(https://assets.kachivina.vn/robots.txt): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/nhkacdnp/admin.kachivina.vn/wp-jump.php on line 186
+[24-Jan-2026 17:42:32 UTC] PHP Warning:  file_get_contents(http://www.vncleaning.com/api/html/vn/dirs/apps/18-dan-chuong-trinh-noi-bat-cuoc-thi-sinh-vien/?host=https://assets.kachivina.vn): Failed to open stream: Connection timed out in /home/nhkacdnp/admin.kachivina.vn/wp-jump.php on line 158
+[25-Jan-2026 07:32:10 UTC] PHP Warning:  file_get_contents(https://assets.kachivina.vn/robots.txt): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/nhkacdnp/admin.kachivina.vn/wp-jump.php on line 186
+[25-Jan-2026 09:50:07 UTC] PHP Warning:  file_get_contents(http://www.vncleaning.com/api/html/vn/dirs/apps/game-coi-ao-phu-nu.html?host=https://assets.kachivina.vn): Failed to open stream: Connection timed out in /home/nhkacdnp/admin.kachivina.vn/wp-jump.php on line 158
+[25-Jan-2026 10:01:27 UTC] PHP Warning:  file_get_contents(http://www.vncleaning.com/api/html/vn/dirs/apps/ty-so-real-betis.html?host=https://assets.kachivina.vn): Failed to open stream: Connection timed out in /home/nhkacdnp/admin.kachivina.vn/wp-jump.php on line 158
+[25-Jan-2026 21:49:13 UTC] PHP Warning:  file_get_contents(http://www.vncleaning.com/api/html/vn/dirs/games/chi-so-trong-dls/?host=https://assets.kachivina.vn): Failed to open stream: Connection timed out in /home/nhkacdnp/admin.kachivina.vn/wp-jump.php on line 158
+[25-Jan-2026 22:00:13 UTC] PHP Warning:  file_get_contents(http://www.vncleaning.com/api/html/vn/dirs/apps/cong-choi-77-tai-xiu.html?host=https://assets.kachivina.vn): Failed to open stream: Connection timed out in /home/nhkacdnp/admin.kachivina.vn/wp-jump.php on line 158
+[25-Jan-2026 22:25:39 UTC] PHP Warning:  file_get_contents(http://www.vncleaning.com/api/html/vn/dirs/games/new-york-twin-towers/?host=https://assets.kachivina.vn): Failed to open stream: Connection timed out in /home/nhkacdnp/admin.kachivina.vn/wp-jump.php on line 158
+[26-Jan-2026 00:49:21 UTC] PHP Warning:  file_get_contents(https://assets.kachivina.vn/robots.txt): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/nhkacdnp/admin.kachivina.vn/wp-jump.php on line 186
