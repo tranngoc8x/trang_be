@@ -3,23 +3,26 @@
 namespace Tests\Feature\Filament;
 
 use App\Models\User;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
 class DashboardAccessTest extends TestCase
 {
-    public function test_guest_admin_redirects_to_login(): void
+    use RefreshDatabase;
+
+    public function test_guest_is_redirected_to_admin_login(): void
     {
         $this->get('/admin')
             ->assertRedirect('/admin/login');
     }
 
-    public function test_authenticated_admin_can_access_dashboard(): void
+    public function test_admin_user_can_access_dashboard_after_login(): void
     {
         $user = User::query()->firstOrCreate(
             ['email' => 'admin@example.com'],
             [
                 'name' => 'Admin User',
-                'password' => 'password',
+                'password' => bcrypt('password'),
             ],
         );
 

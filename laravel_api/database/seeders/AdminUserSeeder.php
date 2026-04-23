@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Hash;
 class AdminUserSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Seed the admin user for Filament panel access.
      */
     public function run(): void
     {
