@@ -28,6 +28,9 @@ class ServiceResource extends Resource
                     ->maxLength(255),
                 Forms\Components\RichEditor::make('content')
                     ->columnSpanFull(),
+                Forms\Components\Placeholder::make('image_preview')
+                    ->label('image')
+                    ->content(fn (?\App\Models\Service $record): string => $record?->image()?->url ?? 'No image'),
                 Forms\Components\Toggle::make('show_in_home'),
                 Forms\Components\DateTimePicker::make('published_at'),
                 Forms\Components\TextInput::make('locale')

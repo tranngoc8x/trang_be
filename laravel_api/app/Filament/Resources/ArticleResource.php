@@ -28,6 +28,9 @@ class ArticleResource extends Resource
                     ->maxLength(255),
                 Forms\Components\Textarea::make('description')
                     ->columnSpanFull(),
+                Forms\Components\Placeholder::make('cover_preview')
+                    ->label('cover')
+                    ->content(fn (?\App\Models\Article $record): string => $record?->cover()?->url ?? 'No cover'),
                 Forms\Components\DateTimePicker::make('published_at'),
                 Forms\Components\TextInput::make('locale')
                     ->maxLength(20),

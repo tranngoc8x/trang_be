@@ -24,6 +24,9 @@ class SlideResource extends Resource
                     ->columnSpanFull(),
                 Forms\Components\Textarea::make('position')
                     ->columnSpanFull(),
+                Forms\Components\Placeholder::make('image_preview')
+                    ->label('image')
+                    ->content(fn (?\App\Models\Slide $record): string => $record?->image()?->url ?? 'No image'),
                 Forms\Components\DateTimePicker::make('published_at'),
                 Forms\Components\TextInput::make('locale')
                     ->maxLength(20),

@@ -104,11 +104,25 @@
 - ⏸️ `/api/home-page-content` endpoint: DB thiếu bảng `home_page_contents_cmps` và `components_shared_articles`, cần data mapping thực tế từ frontend trước khi tiếp tục
 - ⏸️ `articles` hiện có 1 record published nhưng không có `slug`, nên chưa có dữ liệu thực tế để verify `filters[slug][$eq]` ở endpoint này dù code parse/filter đã được thêm giống pattern `products/services`.
 
+## Dashboard/Admin Phase
+
+### Đã triển khai (2026-04-23)
+- ✅ Cài Filament panel tại `/admin`
+- ✅ Đăng nhập admin bằng bảng `users` hiện có
+- ✅ Dashboard widget tổng quan content
+- ✅ Resource CRUD cho: `globals`, `static_pages`, `products`, `services`, `articles`, `slides`, `khach_hangs`, `about_uses`, `menus`, `bao_gia_and_tu_vans`
+- ✅ Media preview/read-only cho: `Product.image`, `Product.avatar`, `Service.image`, `Article.cover`, `Slide.image`, `KhachHang.logo`
+- ✅ Test suite Filament hiện pass đầy đủ
+
+### Next step approved
+- ✅ Dashboard/admin plan đã được thực thi theo hướng Filament-first, thay đổi tối thiểu trên codebase hiện tại.
+
 ## Chưa làm (để Phase sau)
 
 ### Admin Panel
-- Chưa cài Filament/Nova
-- Chưa có CRUD admin
+- Chưa có custom media uploader ghi trực tiếp vào schema Strapi media
+- Chưa xử lý `home-page-content` builder
+- Chưa custom theme/TailAdmin shell cho Filament
 
 ## Cách chạy
 

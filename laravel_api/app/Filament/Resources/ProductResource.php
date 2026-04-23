@@ -28,6 +28,12 @@ class ProductResource extends Resource
                     ->maxLength(255),
                 Forms\Components\Textarea::make('description')
                     ->columnSpanFull(),
+                Forms\Components\Placeholder::make('image_preview')
+                    ->label('image')
+                    ->content(fn (?Product $record): string => $record?->image()?->url ?? 'No image'),
+                Forms\Components\Placeholder::make('avatar_preview')
+                    ->label('avatar')
+                    ->content(fn (?Product $record): string => $record?->avatar()?->url ?? 'No avatar'),
                 Forms\Components\Toggle::make('show_in_home'),
                 Forms\Components\DateTimePicker::make('published_at'),
                 Forms\Components\TextInput::make('locale')

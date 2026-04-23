@@ -28,6 +28,52 @@ class ProductResourceTest extends TestCase
             $table->string('locale', 20)->nullable();
             $table->timestamps();
         });
+
+        Schema::create('files', function (Blueprint $table) {
+            $table->id();
+            $table->string('name')->nullable();
+            $table->string('alternative_text')->nullable();
+            $table->string('caption')->nullable();
+            $table->integer('width')->nullable();
+            $table->integer('height')->nullable();
+            $table->json('formats')->nullable();
+            $table->string('hash')->nullable();
+            $table->string('ext')->nullable();
+            $table->string('mime')->nullable();
+            $table->decimal('size', 10, 2)->nullable();
+            $table->string('url')->nullable();
+            $table->string('preview_url')->nullable();
+            $table->string('provider')->nullable();
+            $table->json('provider_metadata')->nullable();
+            $table->string('folder_path')->nullable();
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
+        });
+
+        Schema::create('files_related_mph', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('file_id');
+            $table->unsignedBigInteger('related_id');
+            $table->string('related_type');
+            $table->string('field');
+            $table->integer('order')->default(1);
+        });
+    }
+
+    public function test_product_edit_page_shows_media_fields(): void
+    {
+        $user = User::factory()->create();
+        $product = Product::query()->create([
+            'document_id' => 'product-1',
+            'title' => 'Xe đẩy inox',
+            'slug' => 'xe-day-inox',
+        ]);
+
+        $response = $this->actingAs($user)->get("/admin/products/{$product->getKey()}/edit");
+
+        $response->assertOk();
+        $response->assertSee('image');
+        $response->assertSee('avatar');
     }
 
     public function test_admin_can_view_product_list(): void

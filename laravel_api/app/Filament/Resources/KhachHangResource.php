@@ -25,6 +25,9 @@ class KhachHangResource extends Resource
                     ->maxLength(255),
                 Forms\Components\TextInput::make('website')
                     ->maxLength(255),
+                Forms\Components\Placeholder::make('logo_preview')
+                    ->label('logo')
+                    ->content(fn (?\App\Models\KhachHang $record): string => $record?->logo()?->url ?? 'No logo'),
                 Forms\Components\DateTimePicker::make('published_at'),
                 Forms\Components\TextInput::make('locale')
                     ->maxLength(20),
