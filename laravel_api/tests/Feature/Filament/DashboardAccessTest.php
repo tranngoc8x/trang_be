@@ -30,4 +30,15 @@ class DashboardAccessTest extends TestCase
             ->get('/admin')
             ->assertOk();
     }
+
+    public function test_dashboard_shows_content_overview_stats(): void
+    {
+        $user = User::factory()->create();
+
+        $response = $this->actingAs($user)->get('/admin');
+
+        $response->assertSee('Static Pages');
+        $response->assertSee('Products');
+        $response->assertSee('Services');
+    }
 }
