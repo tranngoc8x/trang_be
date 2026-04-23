@@ -16,6 +16,25 @@ class ProductResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-cube';
 
+    public static function shouldRegisterNavigation(): bool
+    {
+        return static::tableExists();
+    }
+
+    public static function canAccess(): bool
+    {
+        return static::tableExists() && parent::canAccess();
+    }
+
+    protected static function tableExists(): bool
+    {
+        try {
+            return \Illuminate\Support\Facades\Schema::hasTable('products');
+        } catch (\Exception $e) {
+            return false;
+        }
+    }
+
     public static function form(Form $form): Form
     {
         return $form
