@@ -11,7 +11,7 @@ WORKDIR /opt/
 COPY package.json package-lock.json* ./
 
 # Cài đặt package dependencies
-RUN npm install && npm run build
+RUN npm install --loglevel=error && npm run build
 
 # Đặt thư mục làm việc chính
 WORKDIR /opt/app
