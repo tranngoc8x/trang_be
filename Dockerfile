@@ -1,4 +1,4 @@
-FROM node:22.14.0-alpine
+FROM node:22.22.2-alpine
 
 # Cài đặt các thư viện hệ thống cần thiết cho Strapi và thư viện xử lý ảnh (sharp)
 RUN apk update && apk add --no-cache \
