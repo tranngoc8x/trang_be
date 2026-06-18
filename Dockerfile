@@ -8,10 +8,11 @@ RUN apk update && apk add --no-cache \
 WORKDIR /opt/
 
 # Copy các file quản lý package. Dùng package-lock.json nếu có
-COPY package.json package-lock.json* ./
+COPY package.json ./
+ENV NODE_OPTIONS="--max-old-space-size=4096"
 
 # Cài đặt package dependencies
-RUN npm install --loglevel=error && npm run build
+RUN npm install && npm run build
 
 # Đặt thư mục làm việc chính
 WORKDIR /opt/app
